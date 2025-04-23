@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PartyPlanner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎉 PartyPlanner</h1>
+      <p>Plan your party and invite your guests!</p>
+    </header>
+
+    <section class="party-setup">
+      <h2>Party Details</h2>
+      <label>Date:
+        <input type="date" id="partyDate" />
+      </label>
+      <label>Time:
+        <input type="time" id="partyTime" />
+      </label>
+      <label>Location:
+        <input type="text" id="partyLocation" placeholder="123 Party St, Fun City" />
+      </label>
+      <label>Description:
+        <textarea id="partyDescription" rows="3" placeholder="What's the party about?"></textarea>
+      </label>
+      <label>My Role in the Party:
+        <input type="text" id="myRole" placeholder="e.g. Host, DJ, Organizer" />
+      </label>
+    </section>
+
+    <section class="invite-message">
+      <h2>Invite Message</h2>
+      <textarea id="inviteMessage" rows="4" placeholder="Write a personal message for the guests..."></textarea>
+    </section>
+
+    <section class="guest-register">
+      <h2>Register as a Guest</h2>
+      <label>First Name:
+        <input type="text" id="guestFirstName" />
+      </label>
+      <label>Last Name:
+        <input type="text" id="guestLastName" />
+      </label>
+      <button onclick="registerGuest()">Join the Party</button>
+    </section>
+
+    <section class="summary">
+      <h2>Party Summary</h2>
+      <button onclick="generateSummary()">Show Summary</button>
+      <div id="partySummary"></div>
+    </section>
+
+    <section class="guest-list">
+      <h2>Guest List</h2>
+      <ul id="guestList"></ul>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 PartyPlanner. Plan fun responsibly 🎈</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
